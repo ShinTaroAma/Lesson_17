@@ -8,3 +8,8 @@ class Candidate:
         self.main_skill_grade = main_skill_grade
 
 
+
+
+
+class UnableToWorkExeption(Exception):
+    pass

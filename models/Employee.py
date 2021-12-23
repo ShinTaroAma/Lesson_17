@@ -4,24 +4,36 @@
 class Employee:
 
     def __init__(self, name, second_name, mobile_number, email, payment_per_one_day):
+        f = open("text.txt", "r")
+        f.close()
         self.name = name
         self.second_name = second_name
-        self.mobile_number = mobile_number
         self.email = email
+        self.mobile_number = mobile_number
         self.payment_per_one_day = payment_per_one_day
+        self.write_email()
+
+    def write_email(self):
+        emails = []
+        f = open("text.txt", "r")
+        for line in f:
+            emails.append(line)
+
+        if self.email + '\n' in emails:
+            raise ValueError()
+        else:
+            f = open('txt.txt', 'a')
+            f.write(self.email + '\n')
+            f.close()
 
     @staticmethod
     def work(self):
         print("I come to the office")
 
-    def payment_diff(Recruiter_payment, Programmer_payment):
-        return max(Recruiter_payment, Programmer_payment)
 
+    @staticmethod
     def check_salary(self, work_days, payment_per_one_day, no_payment_days):
-        self.day = work_days
         self.payment_per_one_day = payment_per_one_day
-        self.no_payment_days = no_payment_days
-
         return (work_days - no_payment_days) * payment_per_one_day
 
 
@@ -46,4 +58,10 @@ class Programmer(Employee):
         return f"Должность:{self.name} {self.second_name}"
 
 
-prog = Programmer("Roma", "Momot", 33456, "sup@gmail.com", 50.00)
+
+
+
+
+
+prog1 = Employee("Nin","Nan", "0938473546", "asdffg@gmail.com", 500 )
+prog2 = Employee("Nin","Nan", "0938473546", "assdffg@gmail.com", 500 )
