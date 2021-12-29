@@ -1,0 +1,11 @@
+2021-12-25 11:08:55.770840
+FileNotFoundError
+Traceback (most recent call last):
+  File "D:\Py.projects\main.py", line 31, in <module>
+    main()
+  File "D:\Py.projects\main.py", line 25, in main
+    programmer = Employee('abc@abc.com')
+  File "D:\Py.projects\main.py", line 15, in __init__
+    with open('emails.txt', 'r') as emails_file:
+FileNotFoundError: [Errno 2] No such file or directory: 'emails.txt'
+
