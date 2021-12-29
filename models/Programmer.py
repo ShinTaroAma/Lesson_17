@@ -1,3 +1,6 @@
+import unittest
+
+
 class Programmer:
     tech_stack = ""
     closed_this_month = 0
@@ -19,3 +22,11 @@ class Programmer:
 
 programmer = Programmer('darova', 'poka', 'ne dam', 'ne skazhu', 1500)
 assert programmer.work() == "I come to the office and start coding"
+
+
+class SuperTest(unittest.TestCase):
+
+    def TestSomething(self):
+        result = Programmer.work()
+
+        self.assertEqual(result, "I come to the office and start coding")
