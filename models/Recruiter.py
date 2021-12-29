@@ -13,5 +13,8 @@ class Recruiter:
         return f"Должность:{self.name} {self.second_name}"
 
     @staticmethod
-    def work(self):
+    def work():
         return "I come to the office and start hiring"
+
+
+assert Recruiter.work() == "I come to the office and start hiring"
